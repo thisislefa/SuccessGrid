@@ -124,11 +124,12 @@ Update the testimonial cards by modifying the structure:
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+[MIT License](https://github.com/thisislefa/SuccessGrid/blob/main/LICENSE)
 
 ## Author
 
 **Lefa Mofokeng**
 - GitHub: [@thisislefa](https://github.com/thisislefa)
 - Portfolio: [thisislefa.com](https://thisislefa.github.io/portfolio)
+
 
