@@ -4,7 +4,7 @@ A modern, visually compelling success stories grid component featuring client te
 
 ## Live Demo
 
-[View Live Demo](https://thisislefa.github.io/successgrid)
+[View Live Demo](https://thisislefa.github.io/SuccessGrid)
 
 ## Features
 
@@ -131,5 +131,6 @@ Update the testimonial cards by modifying the structure:
 **Lefa Mofokeng**
 - GitHub: [@thisislefa](https://github.com/thisislefa)
 - Portfolio: [thisislefa.com](https://thisislefa.github.io/portfolio)
+
 
 
