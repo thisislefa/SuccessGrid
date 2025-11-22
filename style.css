@@ -1,0 +1,263 @@
+/* CSS Reset and Global Styles */
+        :root {
+            /* Define colors */
+            --color-text-primary: #1a1a1a;
+            --color-text-secondary: #555555;
+            --color-background-white: #f7f7f7;
+            --color-card-background: #ffffff;
+            --color-accent-gold: #ffc700;
+            --font-family-inter: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family-inter);
+            color: var(--color-text-primary);
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-background-white);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* ------------------------------------------- */
+        /* Main Section Container */
+        /* ------------------------------------------- */
+        .story-section {
+            max-width: 1400px;
+            width: 90%;
+            padding: 80px 20px;
+            box-sizing: border-box;
+        }
+
+        /* ------------------------------------------- */
+        /* Grid Layout (3 Cells) */
+        /* ------------------------------------------- */
+        .story-grid {
+            display: grid;
+            /* 3 equal columns for the main layout */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+
+        /* ------------------------------------------- */
+        /* Grid Items (Base Styling) */
+        /* ------------------------------------------- */
+        .grid-card {
+            background-color: var(--color-card-background);
+            border-radius: 4px;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ------------------------------------------- */
+        /* Card 1: Success Stories Heading */
+        /* ------------------------------------------- */
+        .card-heading {
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .brand-logo {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .main-title {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.06em;
+            margin-bottom: auto; /* Pushes the paragraph to the bottom */
+        }
+
+        .summary-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            text-align: center;
+            margin-top: 40px;
+            text-align: right;
+        }
+
+        /* ------------------------------------------- */
+        /* Card 2: Featured Testimonial (Image + Glass Effect) */
+        /* ------------------------------------------- */
+        .card-featured-testimonial {
+            padding: 0; /* No padding needed for the container */
+            position: relative;
+            background-color: transparent; /* Background image handles color */
+            box-shadow: none;
+            display: block; /* To apply width/height correctly */
+        }
+
+        .featured-image-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Glassmorphism Overlay (The text block) */
+        .glass-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            padding: 20px;
+            border-radius: 4px;
+            /* Glassmorphism properties */
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            backface-visibility: visible;
+            color: #efefef; /* Assuming the image is dark enough for light text */
+        }
+        
+        .overlay-quote {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .overlay-person-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .overlay-person-role {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ------------------------------------------- */
+        /* Card 3: Review and Statistics */
+        /* ------------------------------------------- */
+        .card-review-stats {
+            justify-content: space-between;
+        }
+
+        /* Star Rating */
+        .star-rating {
+            font-size: 25px;
+            color: var(--color-accent-gold);
+            letter-spacing: 5px; /* Spacing out the stars */
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Review Text */
+        .review-text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .single-stat {
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--color-text-secondary);
+        }
+
+        /* Author/Profile info */
+        .author-profile {
+            display: flex;
+            align-items: center;
+            margin-top: auto; /* Pushes profile to the bottom */
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid var(--color-card-background); /* Slight ring */
+        }
+
+        .author-info-block {
+            line-height: 1.3;
+        }
+
+        .author-name {
+            font-size: 18px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .author-role {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+            display: block;
+        }
+        
+        /* ------------------------------------------- */
+        /* Responsive Overrides */
+        /* ------------------------------------------- */
+
+        @media (max-width: 1024px) {
+            .story-grid {
+                grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+            }
+            /* Card 2 spans both columns on tablet */
+            .card-featured-testimonial {
+                grid-column: span 2;
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr; /* 1 column on mobile */
+            }
+            .grid-card {
+                padding: 30px;
+            }
+            .main-title {
+                font-size: 44px;
+            }
+            .card-featured-testimonial {
+                grid-column: span 1;
+                height: 350px;
+            }
+            .stats-row {
+                flex-direction: column;
+            }
+        }
